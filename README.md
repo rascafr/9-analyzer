@@ -4,6 +4,17 @@
 
 This is a quick Node.js project developped to demonstrate how to parse communications logs extracted from the Ninebot electric scooters internal serial communication bus.
 
+## Roadmap
+
+- Decoding address ✅
+- Read ASCI formatted logs ✅
+- Decoding commands and arguments meanings 🔜
+- Read pure hexfiles logs 🔜
+- Group dataframes together
+- Display visual frame transaction sequences
+- ...
+- Elon Musk on Mars
+
 ## Install
 
 ```bash
