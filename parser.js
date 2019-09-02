@@ -4,20 +4,17 @@ const fs = require('fs');
 
 Parser.parseHex = function(fileBytes) {
     let frame = null;
+    let frames = [];
     let index = 0;
-    let str = '';
     do {
         frame = extractFrame(fileBytes, index);
         if (frame) {
+            frames.push(frame);
             index = frame.cursor;
-            str += frameToString(frame) + '\n';
-            //frame = null;
         }
     } while (frame !== null);
 
-    fs.writeFileSync('./resume.log', str);
-    
-    console.log('Done');
+    return frames;
 }
 
 function extractFrame(bytes, offset) {
@@ -98,7 +95,7 @@ function byteHex(bytes, pos) {
     return bytes[pos].toString(16);
 }
 
-function frameToString(frame) {
+Parser.frameToString = function(frame) {
     let str = '------ frame ------';
     str += '\n - raw: ' + toHexString(frame.raw);
     str += '\n - flow: ' + D.addresses[frame.src] + ' -> ' + D.addresses[frame.dst];
@@ -111,7 +108,7 @@ function frameToString(frame) {
 }
 
 function displayFrame(frame) {
-    console.log(frameToString(frame));
+    console.log(Parser.frameToString(frame));
 }
 
 function toHexString(byteArray) {
