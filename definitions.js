@@ -129,3 +129,7 @@ D.errors = {
     0x49: 'Internal BMS firmware version mismatch',
     0x50: 'External BMS firmware version mismatch'
 }
+
+D.isRegisterOperation = function(reg) {
+    return (reg >= 0x01 && reg <= 0x04 || reg === 0x61);
+}

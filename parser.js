@@ -103,7 +103,7 @@ function frameToString(frame) {
     str += '\n - raw: ' + toHexString(frame.raw);
     str += '\n - flow: ' + D.addresses[frame.src] + ' -> ' + D.addresses[frame.dst];
     str += '\n - cmd: ' + D.commands[frame.cmd];
-    str += '\n - arg: ' + frame.arg;
+    str += '\n - arg: ' + (D.isRegisterOperation(frame.cmd) ? D.registers[frame.arg] : frame.arg);
     str += '\n - payload: ' + toHexString(frame.payload);
     str += '\n - UTF payload: ' + new Buffer(frame.payload).toString();
     str += '\n';
