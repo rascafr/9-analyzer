@@ -8,10 +8,10 @@ This is a quick Node.js project developped to demonstrate how to parse communica
 
 - Decoding address ✅
 - Read ASCI formatted logs ✅
-- Decoding commands and arguments meanings 🔜
+- Decoding commands and arguments meanings ✅
 - Read pure hexfiles logs ✅
 - Group dataframes together
-- Display visual frame transaction sequences 🔜
+- Display visual frame transaction sequences ✅
 - ...
 - Elon Musk on Mars
 
@@ -36,6 +36,25 @@ npm start
 # dev
 npm run dev
 ```
+
+## UML
+
+PlantUML sequence diagram can be generated using this tool.
+
+You need to download the [PlantUML jar executable](http://sourceforge.net/projects/plantuml/files/plantuml.jar/download) on your machine. 
+
+Then, just set the environment variables `PLANTUML_JAR` as the path of the executable.
+
+**Example:** (MacOS / Linux)
+
+```bash
+export PLANTUML_JAR="~/Documents/plantuml.jar"
+```
+
+The generated file will look like:
+
+![](res/uml.png)
+
 
 ## Getting new logs
 
