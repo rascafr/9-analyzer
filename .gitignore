@@ -1,3 +1,5 @@
 node_modules
-resume.log
 .DS_Store
+generated/resume.log
+generated/uml.png
+generated/uml.txt
