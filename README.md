@@ -53,3 +53,9 @@ Ground (OV) is the black wire. Connect both files to your serial-USB adapter on 
 ## Arduino
 
 Some Arduino code is present insinde of this repos, can be used to parse on the fly some of the serial commands in "realtime".
+
+## Sources
+
+Some reverse engineering on my own.
+
+Also, lot of information here about the protocol: https://github.com/etransport/ninebot-docs/wiki/ES2ESC
