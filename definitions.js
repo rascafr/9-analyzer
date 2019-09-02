@@ -131,5 +131,5 @@ D.errors = {
 }
 
 D.isRegisterOperation = function(reg) {
-    return (reg >= 0x01 && reg <= 0x04 || reg === 0x61);
+    return (reg >= 0x01 && reg <= 0x04 /*|| reg === 0x61*/);
 }
